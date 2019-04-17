@@ -1,0 +1,23 @@
+.navbar {
+  padding: 20px;
+  margin-bottom: 30px;
+
+}
+  
+
+
+  .navbar-brand {
+    margin-right: 30px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: rgb(136, 19, 19);
+    font-weight: 500;
+  }
+
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+
+ 
