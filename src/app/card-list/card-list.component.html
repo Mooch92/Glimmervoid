@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 
-<div class="card" style="width: 24rem;">
+<div class="card" style="width: 55rem;">
   <div class="card-header">
     Card Name &nbsp; Price &nbsp; Image
   </div>
-  <li *ngFor="let card of cards">
+  <li *ngFor="let card of cards.data">
   <ul class="list-group list-group-flush list-unstyled">
    <li class="list-group-item">{{ card.name }} &nbsp;
-    ${{ card.price }} &nbsp;
-   <img src=" {{ card.image }} " alt=""> </li>
+    {{ card.id }} &nbsp;
+    {{ card.uri }}
+   <img src="{{ card.art_crop}}" alt="No pic available">
+  
+  </li>
    
   </ul>
    </li>

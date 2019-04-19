@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CardService } from '../card.service';
+import { Cards } from '../card.model';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-card-list',
@@ -7,24 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardListComponent implements OnInit {
 
-  cards=[{
-    id: 1,
-    name: "Evil Spirit",
-    price: 44.33,
-    image: '/assets/images/1.jpg'
-  },
-  {
-    id: 2,
-    name: "Evil Soul",
-    price: 55.33,
-    image: '/assets/images/2.jpg'
+ 
+ public cards = [];
 
-  }
-]
-
-  constructor() { }
+  constructor(private cardService: CardService) { }
 
   ngOnInit() {
+
+     this.cardService.getCards()
+    .subscribe(data => this.cards=data);
+
+    //.subscribe((data) => console.log(data));
+
+  
+
   }
 
 }
