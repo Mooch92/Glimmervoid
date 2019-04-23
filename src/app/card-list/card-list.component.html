@@ -8,8 +8,8 @@
   <ul class="list-group list-group-flush list-unstyled">
    <li class="list-group-item">{{ card.name }} &nbsp;
     {{ card.id }} &nbsp;
-    {{ card.uri }}
-   <img src="{{ card.art_crop}}" alt="No pic available">
+    
+   <img [src]="card.image_uris.small " alt="No pic available">
   
   </li>
    

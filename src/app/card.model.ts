@@ -1,8 +1,9 @@
 export interface Cards {
     data: [];
+    image_uris: {};
     name: string;
     id: number;
-    art_crop: string;
+    small: string;
     uri: string;
 
 }
