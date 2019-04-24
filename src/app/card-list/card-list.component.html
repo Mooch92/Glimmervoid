@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 
-  
+ <router-outlet></router-outlet>
+ 
 <div class="card" style="width: 32rem;">
   <div class="container">
-  <div class="row card-header">
-    <div class="col">
-      Card Name
+    <div class="row card-header">
+      <div class="col">
+        Card Name
+      </div>
+      <div class="col">
+        Price In USD
+      </div>
+      <div class="col">
+        Image
+      </div>
     </div>
-    <div class="col">
-      Price In USD
-    </div>
-    <div class="col">
-      Image
-    </div>
-  </div>
   </div>
   <span *ngFor="let card of cards.data | slice:0:5">
     <div class="container">
-   <div class="row">
-    <div class="col">
-       {{ card.name }}
-    </div>
+      <div class="row">
+        <div class="col">
+          {{ card.name }}
+        </div>
 
-    <div class="col">
-       ${{ card.prices.usd }}
-    </div>
+        <div class="col">
+          ${{ card.prices.usd }}
+        </div>
 
-    <div class="col">
-       <img [src]="card.image_uris.small " alt="No pic available">
-        
-    </div>
+        <div class="col">
+          <img [src]="card.image_uris.small " alt="No pic available">
 
-     
+        </div>
+
+
       </div>
     </div>
-     <hr>
-    </span>
-   
+    <hr>
+  </span>
+
 </div>
