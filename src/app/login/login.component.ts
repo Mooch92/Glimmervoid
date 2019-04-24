@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     const username = target.querySelector("#username").value;
     const password = target.querySelector("#password").value;
     if(this.log.getUserName("glimmervoid")===username && this.log.getUserPassword("password")===password ){
-      this.route.navigate(['/card'])
+      this.route.navigate(['/cards'])
     }else{
       window.alert("not true")
     }

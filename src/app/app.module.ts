@@ -12,6 +12,8 @@ import { CardListComponent } from './card-list/card-list.component';
 
 import {CardService} from './card.service';
 import { LoginComponent } from './login/login.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
+import {appRoutes} from './routes'
 
 
 
@@ -21,24 +23,15 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     HeaderComponent,
     CardListComponent,
-    LoginComponent
+    LoginComponent,
+    CardDetailsComponent
    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: '', component: LoginComponent
-      },
-      {
-        path: 'card', component: CardListComponent
-      },
-      {
-        path: 'app', component: AppComponent
-      }
-    ])
+    RouterModule.forRoot(appRoutes)
   
   ],
   providers: [CardService ],

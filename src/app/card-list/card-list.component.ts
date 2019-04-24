@@ -4,7 +4,7 @@ import { Cards } from '../card.model';
 import {Observable} from 'rxjs';
 
 @Component({
-  selector: 'app-card-list',
+  // selector: 'app-card-list',
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.css']
 })

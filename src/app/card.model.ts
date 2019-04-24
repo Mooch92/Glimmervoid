@@ -6,5 +6,7 @@ export interface Cards {
     id: number;
     small: string;
     usd: number;
+    released_at: string;
+    uri: string;
 
 }

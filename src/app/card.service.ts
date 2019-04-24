@@ -18,6 +18,10 @@ export class CardService {
   return this._hhtp.get<Cards[]>(this.apiURL );
   }
 
+  getCard(id: number): Observable<Cards[]>{
+    return this._hhtp.get<Cards[]>(this.apiURL)
+  }
+
 }
 
 // const cards = [{

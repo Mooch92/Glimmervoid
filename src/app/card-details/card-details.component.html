@@ -1,0 +1,24 @@
+<div class="container">
+  <img [src]="card?.image_uris.small " [alt]="card?.name" class="detail-image">
+
+  <div class="row">
+    <div class="col-md-11">
+      <h2>{{card?.name}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div><strong>Date:</strong> {{card?.released_at}}</div>
+      
+      <div><strong>Price:</strong> ${{card?.prices?.usd }}</div>
+    </div>
+    <div class="col-md-6">
+      <address>
+      <a href="http:{{card?.uri}}"> <strong>Link:</strong></a>
+
+      </address>
+    </div>
+  </div>
+</div>
+
