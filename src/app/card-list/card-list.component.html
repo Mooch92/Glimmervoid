@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 
-<div class="card" style="width: 55rem;">
-  <div class="card-header">
-    Card Name &nbsp; Price &nbsp; Image
-  </div>
-  <li *ngFor="let card of cards.data">
-  <ul class="list-group list-group-flush list-unstyled">
-   <li class="list-group-item">{{ card.name }} &nbsp;
-    {{ card.id }} &nbsp;
-    
-   <img [src]="card.image_uris.small " alt="No pic available">
   
-  </li>
+<div class="card" style="width: 32rem;">
+  <div class="container">
+  <div class="row card-header">
+    <div class="col">
+      Card Name
+    </div>
+    <div class="col">
+      Price In USD
+    </div>
+    <div class="col">
+      Image
+    </div>
+  </div>
+  </div>
+  <span *ngFor="let card of cards.data | slice:0:5">
+    <div class="container">
+   <div class="row">
+    <div class="col">
+       {{ card.name }}
+    </div>
+
+    <div class="col">
+       ${{ card.prices.usd }}
+    </div>
+
+    <div class="col">
+       <img [src]="card.image_uris.small " alt="No pic available">
+        
+    </div>
+
+     
+      </div>
+    </div>
+     <hr>
+    </span>
    
-  </ul>
-   </li>
 </div>
