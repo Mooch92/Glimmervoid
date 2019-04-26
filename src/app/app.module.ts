@@ -13,7 +13,8 @@ import { CardListComponent } from './card-list/card-list.component';
 import {CardService} from './card.service';
 import { LoginComponent } from './login/login.component';
 import { CardDetailsComponent } from './card-details/card-details.component';
-import {appRoutes} from './routes'
+import {appRoutes} from './routes';
+import { CardSearchComponent } from './card-search/card-search.component'
 
 
 
@@ -24,7 +25,8 @@ import {appRoutes} from './routes'
     HeaderComponent,
     CardListComponent,
     LoginComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    CardSearchComponent
    
   ],
   imports: [
