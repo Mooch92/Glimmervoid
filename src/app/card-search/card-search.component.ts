@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Cards } from '../card.model';
+import { CardService} from '../card.service';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-card-search',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cardService: CardService) { }
 
   ngOnInit() {
   }
 
+  search(terem: string): void{
+    
+  }
 }
