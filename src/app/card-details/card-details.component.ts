@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CardService } from '../card.service';
 import { ActivatedRoute} from '@angular/router'
+import { Cards } from '../card.model';
 
 @Component({
   selector: 'app-card-details',
@@ -9,14 +10,43 @@ import { ActivatedRoute} from '@angular/router'
 })
 export class CardDetailsComponent implements OnInit {
  
-  card : any;
+  card: Cards;
 
   constructor(private cardService: CardService, private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit() {
+  
+  
 
-    this.card= this.cardService.getCard(+this.activatedRoute.snapshot.params['id']);
+  ngOnInit() {
+    this.getCard();
+    
+    //   this.activatedRoute.params.subscribe(
+    //   (params)=>{
+       
+    //       this.getID(+params['id']);
+    //       console.log(this.card)
+
+    //   }
+    // )
 
   }
+    
+  getCard(): void {
+    const id = +this.activatedRoute.snapshot.paramMap.get('id');
+    this.cardService.getCard(id)
+
+      .subscribe((card) => { this.card = card});
+  }
+  // getID(cardid: number){
+    
+  //   this.cardService.getCard(cardid).subscribe(
+  //     (cards: Cards[])=>{
+        
+  //       this.card=cards;
+  //     }
+  //   );
+  // }
+
+ 
 
 }

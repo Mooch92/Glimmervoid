@@ -1,24 +1,50 @@
-<div class="container">
-  <img [src]="card?.image_uris.small " [alt]="card?.name" class="detail-image">
 
+
+<div class="container">
+  <!-- <img [src]="card?.image_uris?.small " [alt]="card?.name" class="detail-image"> --> 
+  <!-- <img *ngIf="card" [src]="card?.image_uris?.small" class="detail-image"/> -->
+   <!-- <span *ngIf="card"> -->
+  <!-- <img [src]="cards.image_uris.small " alt="No pic available"> -->
+ 
+<div *ngIf="card">
   <div class="row">
     <div class="col-md-11">
-      <h2>{{card?.name}} </h2>
+    
+      <h2>Name: {{ card.name}} </h2>
+      <div class="row">
+        <div class="col">
+          Name: {{ card?.name }}
+        </div>
+
+        <div class="col">
+          ID {{ card?.id }}
+        </div>
+
+         <div class="col">
+           <img [src]="card?.image " alt="No pic available">
+         </div>
+
+      
+
     </div>
   </div>
+  </div>
+  
+  <!-- <app-card-list></app-card-list> -->
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-6">
-      <div><strong>Date:</strong> {{card?.released_at}}</div>
+      <div><strong>Date:</strong> {{cards.released_at}}</div>
       
-      <div><strong>Price:</strong> ${{card?.prices?.usd }}</div>
+      <div><strong>Price:</strong> ${{cards.prices.usd }}</div>
     </div>
     <div class="col-md-6">
       <address>
-      <a href="http:{{card?.uri}}"> <strong>Link:</strong></a>
+      <a href="http:{{cards.uri}}"> <strong>Link:</strong></a>
 
       </address>
     </div>
-  </div>
+  </div> -->
+<!-- </span> -->
 </div>
 

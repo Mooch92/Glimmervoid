@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://api.scryfall.com/cards/search?q=c%3Awhite+cmc%3D1",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  }
+}

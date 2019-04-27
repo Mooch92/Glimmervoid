@@ -11,14 +11,25 @@ import {Observable} from 'rxjs';
 export class CardListComponent implements OnInit {
 
  
- public cards = [];
+  cards: Cards[] = [];
 
   constructor(private cardService: CardService) { }
 
   ngOnInit() {
+    const cardsObservable = this.cardService.getCards();
 
-     this.cardService.getCards()
-    .subscribe(data => this.cards=data);
+     
+    cardsObservable.subscribe((data: Cards[]) =>{
+      this.cards = data
+    },
+    (err)=>{
+
+    },
+    ()=>{
+      
+    } );
+
+    console.log(this.cards)
 
     //.subscribe((data) => console.log(data));
 
