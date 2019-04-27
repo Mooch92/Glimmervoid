@@ -33,7 +33,6 @@ export class CardListComponent implements OnInit {
 
     //.subscribe((data) => console.log(data));
 
-  
 
   }
 

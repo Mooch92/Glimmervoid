@@ -15,9 +15,13 @@ import {CardService} from './card.service';
 import { LoginComponent } from './login/login.component';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import {appRoutes} from './routes';
+<<<<<<< HEAD
 import { Error404Component} from './display404/404.component';
 import { CardRoutingModule } from './card-routing.module';
 import { InMemoryScryfallService } from './in-memory-scryfall.service';
+=======
+import { CardSearchComponent } from './card-search/card-search.component'
+>>>>>>> ed49007b2cbce8b86db81901cbf0814469875f56
 
 
 
@@ -29,7 +33,11 @@ import { InMemoryScryfallService } from './in-memory-scryfall.service';
     CardListComponent,
     LoginComponent,
     CardDetailsComponent,
+<<<<<<< HEAD
     Error404Component
+=======
+    CardSearchComponent
+>>>>>>> ed49007b2cbce8b86db81901cbf0814469875f56
    
   ],
   imports: [
