@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cards } from '../card.model';
 import { CardService} from '../card.service';
 import { Observable, Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-card-search',
@@ -10,12 +11,22 @@ import { Observable, Subject } from 'rxjs';
 })
 export class CardSearchComponent implements OnInit {
 
+  //cards: Cards[] = [];
+  cards$: Observable<Cards[]>;
+  private searchTerms = new Subject<string>();
+
   constructor(private cardService: CardService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.cards$ = this.searchTerms.pipe(
+      debounceTime(100),
+      distinctUntilChanged(),
+      switchMap((term: string) => this.cardService.searchCards(term)),
+    );
   }
 
-  search(terem: string): void{
-    
+  search(term: string): void{
+    this.searchTerms.next(term);
   }
+
 }

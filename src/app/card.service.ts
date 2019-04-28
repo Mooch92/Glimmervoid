@@ -13,8 +13,8 @@ export class CardService {
 
   private apiURL = 'api/cards';
 
-  cards: Observable<Cards[]>;  
-  card: Cards[];
+  // cards: Observable<Cards[]>;  
+  // card: Cards[];
   constructor(private _hhtp: HttpClient) { }
 
   getCards(): Observable<Cards[]> {
@@ -48,6 +48,16 @@ export class CardService {
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
+  }
+
+  searchCards(term: string): Observable<Cards[]>{
+    if(!term.trim()){
+      return of([]);
+    }
+    return this._hhtp.get<Cards[]>(`${this.apiURL}/?name=${term}`).pipe(
+      //tap(_ => this.log(`found cards matching "${term}"`)),
+      catchError(this.handleError<Cards[]>('searchCards', []))
+    );
   }
 
   // public getCardId(id: string): Observable<Cards>{
