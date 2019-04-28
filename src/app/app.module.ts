@@ -43,7 +43,7 @@ import { CardSearchComponent } from './card-search/card-search.component'
     FormsModule,
     CardRoutingModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryScryfallService , { dataEncapsulation: false }
+      InMemoryScryfallService, { dataEncapsulation: false }
     )
   
   ],
