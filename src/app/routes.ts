@@ -4,6 +4,7 @@ import { CardListComponent } from './card-list/card-list.component';
 import { AppComponent } from './app.component';
 import { Routes} from '@angular/router';
 import { Error404Component } from './display404/404.component';
+import { CardSortComponent } from './card-sort/card-sort.component';
 
 export const appRoutes: Routes=[
 
@@ -20,7 +21,9 @@ export const appRoutes: Routes=[
             
         ]
     },
-
+    {
+        path: 'sort', component: CardSortComponent
+    },
     {
         path: 'details/:id', component: CardDetailsComponent
     },

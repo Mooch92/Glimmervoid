@@ -1,0 +1,8 @@
+<h4>Sort by</h4>
+
+<select [(ngModel)]="selectedOption" name="option">
+  <option *ngFor="let option of options" [ngValue]="option">
+    {{option.viewValue}}
+  </option>
+</select>
+<p>{{selectedOption.value}}</p>

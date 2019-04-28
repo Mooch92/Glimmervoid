@@ -20,6 +20,7 @@ import { CardRoutingModule } from './card-routing.module';
 import { InMemoryScryfallService } from './in-memory-scryfall.service';
 
 import { CardSearchComponent } from './card-search/card-search.component'
+import { CardSortComponent } from './card-sort/card-sort.component';
 
 
 
@@ -34,7 +35,8 @@ import { CardSearchComponent } from './card-search/card-search.component'
     CardDetailsComponent,
 
     Error404Component,
-    CardSearchComponent
+    CardSearchComponent,
+    CardSortComponent
    
   ],
   imports: [
