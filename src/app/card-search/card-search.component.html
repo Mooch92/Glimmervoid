@@ -3,7 +3,7 @@
   <p>Card's Name: <input #searchBox id = "search-box" (input)="search(searchBox.value)"/></p>
 
   <ul class = "search-result">
-    <li *ngFOR = "let card of cards$ | async">
+    <li *ngFor = "let card of cards$ | async">
       <a routerLink = "/details/{{card.id}}">
         {{card.name}}
       </a>
