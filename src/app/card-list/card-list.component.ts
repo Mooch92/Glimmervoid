@@ -15,9 +15,13 @@ export class CardListComponent implements OnInit {
 
   constructor(private cardService: CardService) { }
 
+  delete(id: number): void {  
+    this.cards.splice(id, 1);
+  }
+  
   ngOnInit() {
     const cardsObservable = this.cardService.getCards();
-
+  
      
     cardsObservable.subscribe((data: Cards[]) =>{
       this.cards = data
@@ -29,6 +33,7 @@ export class CardListComponent implements OnInit {
       
     } );
 
+    
     console.log(this.cards)
 
     //.subscribe((data) => console.log(data));

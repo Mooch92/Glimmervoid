@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <span *ngFor="let card of cards | slice:0:4">
+  <span *ngFor="let card of cards | slice:0:4; let i = index">
    
       <div class="row">
         
@@ -21,6 +21,13 @@
              
           <img [src]="card?.image "  alt="No pic available"></a>
 
+        </div>
+
+        <div>
+          <!-- delete cards button -->
+        <div class="col">
+          <button class="btn btn-primary btn-xs" (click)="delete(i)">Delete</button>
+        </div>
         </div>
 
 
