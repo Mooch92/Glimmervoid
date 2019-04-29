@@ -19,6 +19,7 @@ export class CardDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.getCard();
+    this.deleteCard();
     
     //   this.activatedRoute.params.subscribe(
     //   (params)=>{
@@ -37,6 +38,14 @@ export class CardDetailsComponent implements OnInit {
 
       .subscribe((card) => { this.card = card});
   }
+
+  deleteCard(): void {
+    const id = +this.activatedRoute.snapshot.paramMap.get('id');
+    this.cardService.getCard(id)
+
+      .subscribe((card) => { this.card = card});
+  }
+
   // getID(cardid: number){
     
   //   this.cardService.getCard(cardid).subscribe(
