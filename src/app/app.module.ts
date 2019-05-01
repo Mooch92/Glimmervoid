@@ -45,7 +45,7 @@ import { CardSortComponent } from './card-sort/card-sort.component';
     FormsModule,
     CardRoutingModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryScryfallService , { dataEncapsulation: false }
+      InMemoryScryfallService, { dataEncapsulation: false }
     )
   
   ],
