@@ -17,7 +17,7 @@ export interface Option{
 export class CardListComponent implements OnInit {
   
   options: Option[] = [
-    {value: 'id', viewValue: 'ID'},
+    {value: 'name', viewValue: 'Name'},
     {value: 'image', viewValue: 'Image'},
     {value: 'uri', viewValue: 'URI'},
     {value: 'released_at', viewValue: 'Released at'}
