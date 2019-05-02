@@ -1,9 +1,8 @@
 
 
 .search{
-    float: left;
-    width: 50%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
 }
 
 .card{
@@ -11,3 +10,11 @@
     width: 50%;
 }
 
+.sort{
+    width: 100%;
+    float: left;
+}
+
+.row{
+    width: 100%;
+}
