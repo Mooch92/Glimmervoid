@@ -11,7 +11,8 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 })
 export class CardSearchComponent implements OnInit {
 
-  //cards: Cards[] = [];
+  // cards: Cards[];
+  // selectedCard: Cards;
   cards$: Observable<Cards[]>;
   private searchTerms = new Subject<string>();
 
@@ -28,5 +29,18 @@ export class CardSearchComponent implements OnInit {
   search(term: string): void{
     this.searchTerms.next(term);
   }
+
+  // add(name: string): void{
+  //   name = name.trim();
+  //   if(!name){return;}
+  //   this.cardService.addCard({name} as Cards)
+  //     .subscribe(card => {
+  //       this.cards.push(card);
+  //     });
+  // }
+
+  // onSelect(card: Cards): void{
+  //   this.selectedCard = card;
+  // }
 
 }

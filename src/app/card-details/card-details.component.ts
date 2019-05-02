@@ -10,7 +10,7 @@ import { Cards } from '../card.model';
 })
 export class CardDetailsComponent implements OnInit {
  
-  card: Cards;
+  @Input() card: Cards;
 
   constructor(private cardService: CardService, private activatedRoute: ActivatedRoute) { }
 
