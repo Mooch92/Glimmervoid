@@ -4,58 +4,15 @@
 
 <div class="row">
   
-  <!--
-    SHANNON, this is the old code where your delete button was
-    I have commented out so you may look back at it to see how you 
-    accomplished delete before.
-
-
-    <div   class="card" style="width: 32rem;">
-  <div class="container">
-    <div class="row card-header">
-      
-      <div class="row">
-        Image
-      </div>
-    </div>
-  </div>
-  <span *ngFor="let card of cards | slice:0:4; let i = index">
-   
-      <div class="row">
-        
-
-        <div class="col">
-           <a routerLink="/details/{{card.id}}" class="container">
-             
-          <img [src]="card?.image "  alt="No pic available"></a>
-
-        </div>
-
-        <div>
-
-          <div class="col">
-            <button class="btn btn-primary btn-xs" (click)="delete(i)">Delete</button>
-          </div>
-          </div>
-  
-  
-        </div>
-      
-      <hr>
-    </span>
-  </div>
-  
-  <div class = "search"><app-card-search></app-card-search></div>
-  -->
- 
-  <div class="col-lg-4 col-sm-6"  *ngFor="let card of cards ">
+  <div class="col-lg-4 col-sm-6"  *ngFor="let card of cards; let i = index">
    
       
           <a routerLink="/details/{{card.id}}" >
           <div> <img [src]="card?.image " alt="No pic available"
               class=" img-fluid img-thumbnail rounded mx-auto d-block"> </div> </a>
-    
-     
+              <div>
+              <button class="btn btn-primary btn-xs" (click)="delete(i)">Delete</button>
+              </div>
           </div>
    </div>
 </div>
