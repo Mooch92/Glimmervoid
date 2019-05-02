@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { CardService } from '../card.service';
 import { ActivatedRoute} from '@angular/router'
 import { Cards } from '../card.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-card-details',
@@ -12,7 +13,10 @@ export class CardDetailsComponent implements OnInit {
  
   @Input() card: Cards;
 
-  constructor(private cardService: CardService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private cardService: CardService, 
+    private activatedRoute: ActivatedRoute,
+    private location: Location) { }
 
   
   
@@ -42,6 +46,10 @@ export class CardDetailsComponent implements OnInit {
     this.cardService.getCard(id)
 
       .subscribe((card) => { this.card = card});
+  }
+
+  goBack(): void{
+    this.location.back();
   }
 
   // getID(cardid: number){
