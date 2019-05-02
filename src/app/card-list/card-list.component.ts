@@ -61,6 +61,6 @@ export class CardListComponent implements OnInit {
 
     //.subscribe((data) => console.log(data));
   }
-  selectedOption = this.options[2]; //: string;
+  selectedOption = this.options[0]; //: string;
 
 }
