@@ -1,7 +1,7 @@
 export class Cards {
     data: [];
     image_uris: {};
-    prices: {};
+    prices: {usd: string, euro: string};
     name: string;
     id: number;
     small: string;

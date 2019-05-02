@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { Routes} from '@angular/router';
 import { Error404Component } from './display404/404.component';
 import { CardSortComponent } from './card-sort/card-sort.component';
+import { CardSearchComponent } from './card-search/card-search.component';
 
 export const appRoutes: Routes=[
 
@@ -33,7 +34,7 @@ export const appRoutes: Routes=[
     {
         path: 'error', component: Error404Component
     },
-   
+
 
    
 

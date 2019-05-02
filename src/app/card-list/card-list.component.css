@@ -1,2 +1,13 @@
 
 
+.search{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.card{
+    float: left;
+    width: 50%;
+}
+

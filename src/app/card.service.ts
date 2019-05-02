@@ -5,6 +5,9 @@ import { Observable, observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 //import { MessageService } from '../message.service';
 
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
+};
 
 @Injectable({
   providedIn: 'root'
@@ -59,6 +62,12 @@ export class CardService {
       catchError(this.handleError<Cards[]>('searchCards', []))
     );
   }
+
+  // addCard(card: Cards): Observable<Cards>{
+  //   return this._hhtp.post<Cards>(this.apiURL, card, httpOptions).pipe(
+  //     catchError(this.handleError<Cards>('addCard'))
+  //   );
+  // }
 
   // public getCardId(id: string): Observable<Cards>{
   //   return new Observable<Cards>((observer)=>{
