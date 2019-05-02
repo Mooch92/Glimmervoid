@@ -21,6 +21,9 @@ import { InMemoryScryfallService } from './in-memory-scryfall.service';
 
 import { CardSearchComponent } from './card-search/card-search.component'
 import { CardSortComponent } from './card-sort/card-sort.component';
+import { CardSearchComponent } from './card-search/card-search.component';
+import { DeckStatsComponent } from './deck-stats/deck-stats.component';
+import { ExportComponent } from './export/export.component'
 
 
 
@@ -37,6 +40,8 @@ import { CardSortComponent } from './card-sort/card-sort.component';
     Error404Component,
     CardSearchComponent,
     CardSortComponent
+    DeckStatsComponent,
+    ExportComponent
    
   ],
   imports: [
