@@ -1,20 +1,33 @@
 <!DOCTYPE html>
-<div class="container">
-  
 
-<div class="row">
-  
+ <!-- <app-card-details [card]="cards"></app-card-details> -->
  
-  <div class="col-lg-4 col-sm-6"  *ngFor="let card of cards ">
-   
+<div   class="card" style="width: 32rem;">
+  <div class="container">
+    <div class="row card-header">
       
-          <a routerLink="/details/{{card.id}}" >
-          <div> <img [src]="card?.image " alt="No pic available"
-              class=" img-fluid img-thumbnail rounded mx-auto d-block"> </div> </a>
+      <div class="row">
+        Image
+      </div>
+    </div>
+  </div>
+  <span *ngFor="let card of cards | slice:0:4">
+   
+      <div class="row">
+        
+
+        <div class="col">
+           <a routerLink="/details/{{card.id}}" class="container">
+             
+          <img [src]="card?.image "  alt="No pic available"></a>
+
+        </div>
+
+
+      </div>
     
-     
-          </div>
-   </div>
+    <hr>
+  </span>
+
 </div>
-
-
+<app-export></app-export>

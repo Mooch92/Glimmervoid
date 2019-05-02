@@ -1,33 +1,50 @@
 
 
-<div class="container-fluid">
-
-  <div *ngIf="card">
-    <div class="row">
-      <div class="col-sm-6">
-  <div class="card text-center mx-auto" style="width: 20rem;">
-    <img class="card-img-top" [src]="card?.image"  alt="Card image cap">
-    
-      </div>
-      </div>
-      
-      
-        <div class="col-sm-6">
-            <div class="card-body">
-               
-        <ul class="list-group list-group-flush">
-          <h5 class="card-title">Given Name: {{ card.name}} </h5>
-          <p class="card-text"><i>Description: </i> {{card.description}} </p>
-          <li class="list-group-item">Price in USD: {{card.price.usd}}</li>
-          <li class="list-group-item">Price in EUR: {{card.price.euro}}</li>
-          <li class="list-group-item">ID: {{card.id}} </li>
-        </ul>
-      <a href="{{card.uri}}" class="btn btn-primary">See More...</a>
-   </div>
-</div>
-</div>
+<div class="container">
+  <!-- <img [src]="card?.image_uris?.small " [alt]="card?.name" class="detail-image"> --> 
+  <!-- <img *ngIf="card" [src]="card?.image_uris?.small" class="detail-image"/> -->
+   <!-- <span *ngIf="card"> -->
+  <!-- <img [src]="cards.image_uris.small " alt="No pic available"> -->
  
+<div *ngIf="card">
+  <div class="row">
+    <div class="col-md-11">
+    
+      <h2>Name: {{ card.name}} </h2>
+      <div class="row">
+        <div class="col">
+          Name: {{ card?.name }}
+        </div>
+
+        <div class="col">
+          ID {{ card?.id }}
+        </div>
+
+         <div class="col">
+           <img [src]="card?.image " alt="No pic available">
+         </div>
+
+      
+
+    </div>
+  </div>
+  </div>
+  
+  <!-- <app-card-list></app-card-list> -->
+
+  <!-- <div class="row">
+    <div class="col-md-6">
+      <div><strong>Date:</strong> {{cards.released_at}}</div>
+      
+      <div><strong>Price:</strong> ${{cards.prices.usd }}</div>
+    </div>
+    <div class="col-md-6">
+      <address>
+      <a href="http:{{cards.uri}}"> <strong>Link:</strong></a>
+
+      </address>
+    </div>
+  </div> -->
+<!-- </span> -->
 </div>
 
-
-</div>

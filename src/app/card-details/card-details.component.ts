@@ -33,9 +33,7 @@ export class CardDetailsComponent implements OnInit {
     
   getCard(): void {
     const id = +this.activatedRoute.snapshot.paramMap.get('id');
-    this.cardService.getCard(id)
-
-      .subscribe((card) => { this.card = card});
+    this.cardService.getCard(id).subscribe((card) => { this.card = card});
   }
   // getID(cardid: number){
     
