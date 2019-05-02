@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+<div class="container">
+  
 
- <!-- <app-card-details [card]="cards"></app-card-details> -->
- 
-<div   class="card" style="width: 32rem;">
+<div class="row">
+  
+  <!--
+    SHANNON, this is the old code where your delete button was
+    I have commented out so you may look back at it to see how you 
+    accomplished delete before.
+
+
+    <div   class="card" style="width: 32rem;">
   <div class="container">
     <div class="row card-header">
       
@@ -24,17 +32,32 @@
         </div>
 
         <div>
-          <!-- delete cards button -->
-        <div class="col">
-          <button class="btn btn-primary btn-xs" (click)="delete(i)">Delete</button>
-        </div>
-        </div>
 
-
-      </div>
+          <div class="col">
+            <button class="btn btn-primary btn-xs" (click)="delete(i)">Delete</button>
+          </div>
+          </div>
+  
+  
+        </div>
+      
+      <hr>
+    </span>
+  </div>
+  
+  <div class = "search"><app-card-search></app-card-search></div>
+  -->
+ 
+  <div class="col-lg-4 col-sm-6"  *ngFor="let card of cards ">
+   
+      
+          <a routerLink="/details/{{card.id}}" >
+          <div> <img [src]="card?.image " alt="No pic available"
+              class=" img-fluid img-thumbnail rounded mx-auto d-block"> </div> </a>
     
-    <hr>
-  </span>
+     
+          </div>
+   </div>
 </div>
 
-<div class = "search"><app-card-search></app-card-search></div>
+
