@@ -10,7 +10,6 @@ export interface Option{
 }
 
 @Component({
-  // selector: 'app-card-list',
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.css']
 })
@@ -59,7 +58,6 @@ export class CardListComponent implements OnInit {
     console.log(this.cards)
 
 
-    //.subscribe((data) => console.log(data));
   }
   selectedOption = this.options[0]; //: string;
 
