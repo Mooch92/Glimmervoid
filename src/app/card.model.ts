@@ -9,8 +9,5 @@ export class Cards {
     released_at: string;
     uri: string;
     tcgplayer_id: number;
-
-   
-
 }
 

@@ -18,22 +18,10 @@ export class CardDetailsComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private location: Location) { }
 
-  
-  
 
   ngOnInit() {
     this.getCard();
     this.deleteCard();
-    
-    //   this.activatedRoute.params.subscribe(
-    //   (params)=>{
-       
-    //       this.getID(+params['id']);
-    //       console.log(this.card)
-
-    //   }
-    // )
-
   }
     
   getCard(): void {
@@ -50,18 +38,6 @@ export class CardDetailsComponent implements OnInit {
 
   goBack(): void{
     this.location.back();
-  }
-
-  // getID(cardid: number){
-    
-  //   this.cardService.getCard(cardid).subscribe(
-  //     (cards: Cards[])=>{
-        
-  //       this.card=cards;
-  //     }
-  //   );
-  // }
-
- 
+  } 
 
 }

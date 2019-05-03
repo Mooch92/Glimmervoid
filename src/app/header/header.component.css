@@ -3,10 +3,8 @@
   margin-bottom: 30px;
 
 }
-  
 
-
-  .navbar-brand {
+.navbar-brand {
     margin-right: 30px;
     font-size: 30px;
     letter-spacing: 1px;
@@ -14,8 +12,7 @@
     font-weight: 500;
   }
 
-
-  .nav-item {
+.nav-item {
     font-size: 14px;
   }
 

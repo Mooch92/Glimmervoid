@@ -27,7 +27,7 @@ export class DeckStatsComponent implements OnInit {
     
     
   
-    //  var typeArr = [];
+
 
     //get average cmc
     for (let x of this.cardMemory.createDb().cards) {
@@ -56,32 +56,6 @@ export class DeckStatsComponent implements OnInit {
 
     
     console.log(this.typecounts);
-   /* console.log(AvgCMC);
-    //end of colors
-
-    //get all the types and the count
-    //game plan here is add each type into an array and the loop over the array counting the number of appearances of each thing
-    //probably not ideal but here we are
-  /*  for (let x of db.cards) { //this fills typeArr with each cards type and subtype
-      if (x.subType != null && x.subType != "")
-        this.typeArr.push(x.subType);
-      this.typeArr.push(x.superType);
-      //  console.log("pushed " + x.superType);
-    }
-
-    console.log(this.typeArr);
-
-
-    for (let y of this.typeArr) { // for each card type 
-      console.log(y);
-      for (let x in this.typeArr) { // for each element in type arr
-        if (this.typeArr[x] == y && y == "Land") { // if typecount element at x is the same as y (if the y element is a land, and it hits a land somewhere, )
-          //this.typecounts[x] +=1
-          this.landCount += 1;
-          console.log(this.landCount);
-        }
-      }
-    }*/
 
   }
 }
